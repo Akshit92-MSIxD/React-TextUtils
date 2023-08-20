@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export default function Navbar(props) {
   return (
@@ -27,3 +28,18 @@ export default function Navbar(props) {
   </nav>
   )
 }
+
+
+Navbar.propTypes = {
+     title : PropTypes.string.isRequired, // isRequired will throw a warning if we dont not supply title(prop) to this Navabar(component) from App.js(Bada component) :)
+     about : PropTypes.string,
+};
+
+
+// Navbar.defaultProps = { 
+//     title : "Set Title Here",
+//     About : "About"
+// }
+
+
+
