@@ -30,10 +30,21 @@ export default function TextForm(props) {
 //  So to answer your question there is no difference in both of them in react. :)
 
   return (
+    <>
     <div className=" container mb-3">
    <h1 className="mt-3">{props.heading}</h1>
   <textarea className="form-control " id="exampleFormControlTextarea1" value={text} onChange={handleOnChange} rows="13"></textarea>  
   <button type="button" className="btn btn-primary mt-3" onClick={convert_to_up}>Covert to UpperCase</button>
   </div>
+
+  <div className="container my-3">
+   <h3>Your Text Summary</h3>
+   <p> {text.split(/[\w\d]+/g).length-1} words and {text.trim().length} characters  </p>
+
+  </div>
+
+  </>
+
+
   )
 }
