@@ -19,6 +19,13 @@ export default function TextForm(props) {
   setText(newText);
   }
 
+ const convert_to_lo = ()=>{
+       
+  console.log("convert_to_up() is clicked!!!");
+  let newText = text.toLowerCase();
+  setText(newText);
+  }
+
 
   const handleOnChange=(e)=>
   {
@@ -35,11 +42,12 @@ export default function TextForm(props) {
    <h1 className="mt-3">{props.heading}</h1>
   <textarea className="form-control " id="exampleFormControlTextarea1" value={text} onChange={handleOnChange} rows="13"></textarea>  
   <button type="button" className="btn btn-primary mt-3" onClick={convert_to_up}>Covert to UpperCase</button>
+  <button type="button" className="btn btn-primary mx-3 mt-3" onClick={convert_to_lo}>Covert to LowerCase</button>
   </div>
 
   <div className="container my-3">
-   <h3>Your Text Summary</h3>
-   <p> {text.split(/[\w\d]+/g).length-1} words and {text.trim().length} characters  </p>
+   <h3 className="text-secondary">Your Text Summary</h3>
+   <p className="text-secondary"> {text.split(/[\w]+/g).length-1} words and {text.trim().length} characters  </p>
 
   </div>
 
