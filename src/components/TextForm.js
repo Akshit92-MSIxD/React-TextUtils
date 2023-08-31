@@ -108,7 +108,7 @@ export default function TextForm(props) {
 
   <div className="container my-3">
    <h3 className="text-secondary">Your Text Summary</h3>
-   <p className="text-secondary"> {text.split(/[a-zA-Z]+/g).length-1} words , {text.trim().length} characters and {text.match(/[0-9]+/g)!=null ? text.match(/[0-9]+/g).length : 0} numbers </p>
+   <p className="text-secondary"> {text.split(/\w+/g).length-1} words , {text.trim().length} characters , {text.match(/\d/g) == null ? 0 : text.match(/\d/g).length} digits and {text.match(/[0-9]+/g)!=null ? text.match(/[0-9]+/g).length : 0} numbers </p>
 
   </div>
 
