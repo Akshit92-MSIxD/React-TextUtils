@@ -7,7 +7,7 @@ export default function TextForm(props) {
   // State belongs to a component!!!
   
   // Example of hooks where text is a state variable (React watch krti hai ise!!!) and setText is a method used to change the value of text :)
-  const [text,setText] = useState("Write a text here");  
+  const [text,setText] = useState("");  
 
   //  text = "Changed text";// wrong way to change the value of text
   //  setText("Changed text"); // correct way to change the value of text
