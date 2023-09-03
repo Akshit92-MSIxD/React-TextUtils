@@ -20,7 +20,10 @@ export default function TextForm(props) {
        
   let newText = text.toUpperCase();
   setText(newText);
+
+  if(text !== "")
   props.showAlert("Text is converted to Uppercase !!!");
+
   }
 
 
@@ -31,7 +34,10 @@ export default function TextForm(props) {
        
   let newText = text.toLowerCase();
   setText(newText);
+
+  if(text !== "")
   props.showAlert("Text is converted to LowerCase !!!");
+
   }
 
 
@@ -50,6 +56,7 @@ export default function TextForm(props) {
 
   setText(newText);
 
+  if(text !== "")
   props.showAlert("Text is converted to Capitalized Case !!!");
 
   }
@@ -76,7 +83,8 @@ export default function TextForm(props) {
     let newText = stringArray.join(" ");
 
     setText(newText);
-
+       
+    if(text !== "")
     props.showAlert("Text is converted to Sentenced Case!!!");
 
     }
@@ -91,6 +99,7 @@ export default function TextForm(props) {
 
      setText(newText);
      
+     if(text !== "")
      props.showAlert("Text is cleared now !!!");
 
     }
@@ -105,6 +114,7 @@ export default function TextForm(props) {
 
      setText(replacedText);
 
+     if(text !== "")
      props.showAlert("Extra Spaces are removed now!!!");
 
     }
@@ -119,6 +129,8 @@ export default function TextForm(props) {
       textarea.focus(); // assist select()
       textarea.select(); // select the current text of textarea field
       navigator.clipboard.writeText(text); // It will write the current text of textarea field to clipboard :)
+
+      if(text !== "")
       props.showAlert("Text is copied successfully into the clipboard!!!");
       
 
