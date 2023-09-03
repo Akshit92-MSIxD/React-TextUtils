@@ -162,9 +162,9 @@ export default function TextForm(props) {
   <button type="button" className="btn btn-primary ms-3 mt-3" onClick={convert_to_lo}>Lower Case</button>
   <button type="button" className="btn btn-primary ms-3 mt-3" onClick={convert_to_ca}>Capitalized Case</button>
   <button type="button" className="btn btn-primary ms-3 mt-3" onClick={convert_to_se}>Sentence Case</button>
-  <button type="button" className="btn btn-primary ms-3 mt-3" onClick={copyText}>Copy text</button>
   <button type="button" className="btn btn-primary ms-3 mt-3" onClick={removeExtraSpaces}>Remove Extra Spaces</button>
-  <button type="button" className="btn btn-primary ms-3 mt-3" onClick={clearText}>Clear text</button>
+  <button type="button" className="btn btn-primary ms-3 mt-3" onClick={copyText}>Copy Text</button>
+  <button type="button" className="btn btn-primary ms-3 mt-3" onClick={clearText}>Clear Text</button>
   </div>
 
   <div className="container my-3">

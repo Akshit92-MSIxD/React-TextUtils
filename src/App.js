@@ -51,8 +51,8 @@ const toggleMode = () =>{
 
   return (
     <>
-  <Alerts alert={alertMessage}/>
  <Navbar title="TextUtils" about = "About me" mode={mode} toggleMode={toggleMode}  showAlert={showAlert}/>
+  <Alerts alert={alertMessage}/>
  <TextForm heading="Enter the text to analyze below" mode={mode} toggleMode={toggleMode} showAlert={showAlert}/>
   {/* <About/> */}
   </>
