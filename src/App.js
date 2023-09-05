@@ -1,10 +1,10 @@
 import React from 'react'
-import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alerts from './components/Alerts';
 import {useState} from 'react'
-// import About from './components/About';
+import About from './components/About';
+import { BrowserRouter , Routes , Route , Link } from 'react-router-dom';
 
 
 function App() {
@@ -27,7 +27,7 @@ const showAlert = (Message)=>{
 
 
 
-// method that handles the switch the mode from light to dark or vice versa :)
+// method that handles the Routes the mode from light to dark or vice versa :)
 const toggleMode = () =>{
   
   if(mode === 'light')
@@ -51,14 +51,29 @@ const toggleMode = () =>{
 
   return (
     <>
- <Navbar title="TextUtils" about = "About me" mode={mode} toggleMode={toggleMode}  showAlert={showAlert}/>
-  <Alerts alert={alertMessage}/>
- <TextForm heading="Enter the text to analyze below" mode={mode} toggleMode={toggleMode} showAlert={showAlert}/>
-  {/* <About/> */}
+
+  <BrowserRouter>
+
+     <Navbar title="TextUtils" about = "About me" mode={mode} toggleMode={toggleMode}  showAlert={showAlert}/>
+     <Alerts alert={alertMessage}/>
+
+        <Routes>
+            
+              <Route exact path="/" element={  <TextForm heading="Enter the text to analyze below" mode={mode} toggleMode={toggleMode} showAlert={showAlert} />} />
+
+              <Route exact path="/About" element={<About/>} />
+
+        </Routes>
+  
+  </BrowserRouter>
+
+
+
   </>
       
   );
-}
+  
+  }
 
-export default App;
+    export default App;
 
