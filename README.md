@@ -6,4 +6,9 @@
 -- HTML , CSS , Javascript , Bootstrap and React
 
 
+# Hosted on Netlify :
+  Link : https://akshitrawat-textutils.netlify.app/
+
+
+
 
