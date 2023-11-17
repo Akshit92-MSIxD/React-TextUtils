@@ -34,7 +34,6 @@ const toggleMode = () =>{
   {
     setMode('dark');
     document.body.style.backgroundColor = "#042743";
-    document.body.style.caretColor = "white";
     showAlert("Dark Mode is enabled now");
  
   }
@@ -42,7 +41,6 @@ const toggleMode = () =>{
   { 
     setMode('light');
     document.body.style.backgroundColor = 'white';
-    document.body.style.caretColor = "black";
     showAlert("Light Mode is enabled now");
   }
 }
